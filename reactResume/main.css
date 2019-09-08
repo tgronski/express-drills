@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 500px) {
+    .item{
+        display: inline-block;
+        height: 475px;
+        margin: 0;
+        padding:0;
+    }
+    /* .item>h3{
+        display: block;
+    } */
+}

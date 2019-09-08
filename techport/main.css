@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    
+}
+head{
+    display: none;
+}
+body{
+    background: black;
+}
+main,heading{
+    align-items: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+.initial{
+    font-size: 70px;
+    padding: 2%;
+    text-align: center;
+    
+    
+}
+.initial,#sideBar{
+    font-family: 'Gravitas One', cursive;
+    color: rgb(175, 226, 247);
+}
+
+
+.socialIcons{
+    position: absolute;
+    bottom: 0; 
+    justify-content: space-evenly;
+    width: 100%;
+    flex-direction: row;
+    padding: 0;
+    background: white;
+    margin:0;
+    padding: 1%;
+    height: auto;
+    left:0;
+    
+}
+button{
+    background: none;
+    border: none;
+    font-size: 40px;
+    outline: none;
+    justify-content: space-between; 
+    color: white;
+
+}
+heading>ul{
+    flex-direction: row;
+    padding: 0;
+  
+}
+main{
+    border: 2px darkslategray solid;
+    width: 60%;
+    height: 200px;
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 2%;
+    background: white;
+    
+}
+heading{
+    margin-right: auto;
+    margin-left:auto;
+    width: 60%
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+#sideBar{
+    position: absolute;
+    right: 10px;
+    bottom: 70px;
+}

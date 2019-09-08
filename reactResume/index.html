@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Resume</title>
+  <link type="text/css" href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="application-root"></div>
+  
+  <script
+    src="https://unpkg.com/react@16/umd/react.development.js">
+  </script>
+  <script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+  </script>
+  <script
+  src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+<script type="text/babel">
+function Photo() {
+    return(
+        <img src= "https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" width="200" height="250" alt="Resume Professional Photo"/>
+    );
+}
+function Education() {
+    return (
+        <section class="item"> 
+            <h3> Education </h3>
+            <ul>  
+                <li>Bloc Bootcamp <em>Dec 2018-Present</em></li>
+                <ul> 
+                    <li class="sub"> Full Stack Web Development Program </li> 
+                </ul>
+                <li>San Francisco State University <em> Sept 2011-May 2015</em></li>
+                <ul>
+                    <li>Major: Economics </li>
+                    <li>Student Athlete: Volleyball</li> 
+                </ul>
+            </ul>
+        </section> 
+    );
+};
+function Work(){    
+    return(
+        <section class="item">
+        <h3> Relevant Work Experience </h3> 
+        <ul>
+          <li> Office Manager at <b>Lyft</b> <em> June 2018-Present </em></li>
+            <ul class="sub"> 
+              <li> Managed tech office</li> 
+              <li> Stocked kitchen with snacks</li>
+              <li> Welcomed new hires and set up desks</li>
+            </ul>
+          <li> Marketing Intern at <b>Edelman</b> <em> Jan 2018-June 2018</em></li>
+            <ul class="sub"> 
+              <li>Assisted Marketing team in social media management</li>
+                <ul class="subx">
+                  <li>Instagram</li>
+                  <li>Facebook</li>
+                  <li> Twitter</li>
+                </ul>
+              <li> Attended a Marketing conference</li>
+            </ul>
+        </ul>
+      </section>
+    );
+}
+
+
+function App() {
+    return (
+        <div>
+        <header> <h1> Sally Student</h1> 
+        </header>
+        <main>
+        <Photo />
+            <address> 
+            <h2>414.123.1456</h2>
+            <a href="mailto:Sallystudent@gmail.com?subject= Resume Follow Up" target="_blank" ><h2>SallyStudent@gmail.com</h2></a> 
+            </address>
+        <Education />
+        <Work />
+        </main>
+        </div>
+    );
+  };
+  ReactDOM.render(
+  React.createElement(App), 
+  document.querySelector('#application-root')
+);
+</script>
+  </body>
+</html>
