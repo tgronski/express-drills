@@ -4,26 +4,36 @@ import Card from './card.js'
 
 function List(props){
     return (
-    <div class="App-list">
-    <section class="List">
-      <header class="List-header">
+    <div className="App-list">
+    <section className="List">
+      <header className="List-header">
         <h2>{props.header}</h2>
         </header>
         <div className='List-cards'>
         {props.cards.map((card) =>
           <Card
             key={card.id}
+            id={card.id}
             title={card.title}
             content={card.content}
+            onClickDelete={props.onClickDelete}
           />
         )}
-          <button type="button" class="List-add-button">
-            + Add Random Card
-          </button>
+        
+        <button
+          type='button'
+          className='List-add-button'
+          onClick={() => props.onClickAdd(props.id)}
+        >
+          + Add Random Card
+        </button>
       </div>
     </section>
   </div>
   );
 }
-
+List.defaultProps = {
+  onClickAdd: () => {},
+}
 export default List;
+

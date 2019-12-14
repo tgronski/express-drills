@@ -18,6 +18,8 @@
   src="https://unpkg.com/babel-standalone@6/babel.min.js">
 </script>
 <script type="text/babel">
+
+
 function Photo() {
     return(
         <img src= "https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" width="200" height="250" alt="Resume Professional Photo"/>
@@ -25,12 +27,12 @@ function Photo() {
 }
 function Education() {
     return (
-        <section class="item"> 
+        <section className="item"> 
             <h3> Education </h3>
             <ul>  
                 <li>Bloc Bootcamp <em>Dec 2018-Present</em></li>
                 <ul> 
-                    <li class="sub"> Full Stack Web Development Program </li> 
+                    <li className="sub"> Full Stack Web Development Program </li> 
                 </ul>
                 <li>San Francisco State University <em> Sept 2011-May 2015</em></li>
                 <ul>
@@ -43,19 +45,19 @@ function Education() {
 };
 function Work(){    
     return(
-        <section class="item">
+        <section className="item">
         <h3> Relevant Work Experience </h3> 
         <ul>
           <li> Office Manager at <b>Lyft</b> <em> June 2018-Present </em></li>
-            <ul class="sub"> 
+            <ul className="sub"> 
               <li> Managed tech office</li> 
               <li> Stocked kitchen with snacks</li>
               <li> Welcomed new hires and set up desks</li>
             </ul>
           <li> Marketing Intern at <b>Edelman</b> <em> Jan 2018-June 2018</em></li>
-            <ul class="sub"> 
+            <ul className="sub"> 
               <li>Assisted Marketing team in social media management</li>
-                <ul class="subx">
+                <ul className="subx">
                   <li>Instagram</li>
                   <li>Facebook</li>
                   <li> Twitter</li>
@@ -68,15 +70,15 @@ function Work(){
 }
 
 
-function App() {
+function App(props) {
     return (
         <div>
-        <header> <h1> Sally Student</h1> 
+        <header> <h1> {props.name}</h1> 
         </header>
         <main>
         <Photo />
             <address> 
-            <h2>414.123.1456</h2>
+            <h2>{props.phone}</h2>
             <a href="mailto:Sallystudent@gmail.com?subject= Resume Follow Up" target="_blank" ><h2>SallyStudent@gmail.com</h2></a> 
             </address>
         <Education />
@@ -85,10 +87,17 @@ function App() {
         </div>
     );
   };
-  ReactDOM.render(
-  React.createElement(App), 
+
+
+
+ReactDOM.render(
+  <App name="Sally Student" phone="414.213.1537"/>, 
   document.querySelector('#application-root')
 );
+
+
 </script>
   </body>
 </html>
+
+
